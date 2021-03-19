@@ -16,6 +16,8 @@ public class popupExpand : MonoBehaviour
         destination = gameObject.transform.position;
         BasePos = Base.transform.position;
         speed = 0.2F;
+
+        TogglePopup();
     }
 
     void Update()

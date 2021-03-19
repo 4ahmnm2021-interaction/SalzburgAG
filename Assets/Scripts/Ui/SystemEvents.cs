@@ -18,4 +18,11 @@ public class SystemEvents : MonoBehaviour
         }
     }
 
+    public event Action onScreenCloseAll;
+    public void ScreenCloseAll() {
+        if(onScreenCloseAll != null) {
+            onScreenCloseAll();
+        }
+    }
+
 }

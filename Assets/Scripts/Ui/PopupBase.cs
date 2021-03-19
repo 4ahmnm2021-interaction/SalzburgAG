@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class PopupBase : MonoBehaviour
 {
+    public GameObject DiffLayer;
+    private bool diffLayer = false;
     public void Toggel() {
         SystemEvents.current.PopupClose();
-            Debug.Log("Sprite Clicked");
+        if(diffLayer == false) {
+            DiffLayer.SetActive(true);
+            diffLayer = true;
+        } else
+        {
+            DiffLayer.SetActive(false);
+            diffLayer = false;
+        }
     }
     void OnMouseDown(){
-        Debug.Log("Sprite Clicked");
         Toggel();
     }   
 
