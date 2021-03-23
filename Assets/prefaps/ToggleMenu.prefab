@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DiffLayer: {fileID: 7043023797886629911}
+  baseclose: {fileID: 21300000, guid: 69f38410d7cf51142b1fdbca671235c1, type: 3}
+  baseopen: {fileID: 21300000, guid: 40b5fcbccb266784aa6669a308fa7674, type: 3}
 --- !u!114 &7043023797456246615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +126,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -152,6 +154,7 @@ GameObject:
   - component: {fileID: 7043023797539486837}
   - component: {fileID: 7043023797539486834}
   - component: {fileID: 7043023797539486835}
+  - component: {fileID: 1267541295871287740}
   m_Layer: 0
   m_Name: Navigation-SUB-Button-AR
   m_TagString: Untagged
@@ -247,6 +250,32 @@ SortingGroup:
   m_SortingLayerID: 1765432507
   m_SortingLayer: 1
   m_SortingOrder: 5
+--- !u!61 &1267541295871287740
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043023797539486839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.58}
+    newSize: {x: 0.58, y: 0.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1 &7043023797886629911
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7043023797886629908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -450,6 +479,7 @@ GameObject:
   - component: {fileID: 7043023799107443735}
   - component: {fileID: 7043023799107443734}
   - component: {fileID: 7043023799107443732}
+  - component: {fileID: 8972151316883127019}
   m_Layer: 0
   m_Name: Arbeitschritte_SUB_Button-AR
   m_TagString: Untagged
@@ -586,6 +616,32 @@ SortingGroup:
   m_SortingLayerID: 1765432507
   m_SortingLayer: 1
   m_SortingOrder: 5
+--- !u!61 &8972151316883127019
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043023799107443738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.58}
+    newSize: {x: 0.58, y: 0.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1 &7043023799311448507
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +654,7 @@ GameObject:
   - component: {fileID: 7043023799311448505}
   - component: {fileID: 7043023799311448502}
   - component: {fileID: 7043023799311448503}
+  - component: {fileID: 2822277985979997468}
   m_Layer: 0
   m_Name: Scanner_Button_active 1
   m_TagString: Untagged
@@ -693,6 +750,32 @@ SortingGroup:
   m_SortingLayerID: 1765432507
   m_SortingLayer: 1
   m_SortingOrder: 5
+--- !u!61 &2822277985979997468
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043023799311448507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.58}
+    newSize: {x: 0.58, y: 0.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1 &7043023799463996600
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +789,7 @@ GameObject:
   - component: {fileID: 7043023799463996599}
   - component: {fileID: 7043023799463996596}
   - component: {fileID: 7043023799463996597}
+  - component: {fileID: 287200727229542150}
   m_Layer: 0
   m_Name: Hinweischild_Button_active
   m_TagString: Untagged
@@ -829,3 +913,29 @@ SortingGroup:
   m_SortingLayerID: 1765432507
   m_SortingLayer: 1
   m_SortingOrder: 5
+--- !u!61 &287200727229542150
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043023799463996600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.58}
+    newSize: {x: 0.58, y: 0.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 0.58}
+  m_EdgeRadius: 0

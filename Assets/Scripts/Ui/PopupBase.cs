@@ -26,7 +26,13 @@ public class PopupBase : MonoBehaviour
 
     void OnMouseDown(){
         Toggel();
-    }   
+    } 
+
+    public void WorkSteps() {
+        Debug.Log("toggle");
+        SystemEvents.current.WorkStepsToggle();
+    }
+    
 
 
 

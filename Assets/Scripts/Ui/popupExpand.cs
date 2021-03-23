@@ -10,8 +10,11 @@ public class popupExpand : MonoBehaviour
     private Vector3 BasePos;
     private bool close = false;
 
+  
     void Start()
     {
+
+
         SystemEvents.current.onPopupClose += TogglePopup;
         destination = gameObject.transform.position;
         BasePos = Base.transform.position;
@@ -24,14 +27,27 @@ public class popupExpand : MonoBehaviour
     {
         if(close) {
             transform.position = Vector3.Lerp(transform.position, BasePos, speed);
-        } else {
+        } 
+        if(close == false) {
+
             transform.position = Vector3.Lerp(transform.position, destination, speed);
+
         }
     }
 
     private void TogglePopup() {
-        if(close == true) {close = false; } else { close = true; }
+        if(close == true) 
+        {
+            this.gameObject.layer= 0;
+            close = false;  
+        } else 
+        { 
+            this.gameObject.layer= 2;
+            close = true; 
+        }
     }
+
+
 
 }
 

@@ -25,4 +25,11 @@ public class SystemEvents : MonoBehaviour
         }
     }
 
+    public event Action onWorkStepsToggle;
+    public void WorkStepsToggle() {
+        if(onWorkStepsToggle != null) {
+            onWorkStepsToggle();
+        }
+    }
+
 }
