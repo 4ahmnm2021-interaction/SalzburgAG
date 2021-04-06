@@ -28,11 +28,6 @@ public class PopupBase : MonoBehaviour
         Toggel();
     } 
 
-    public void WorkSteps() {
-        Debug.Log("toggle");
-        SystemEvents.current.WorkStepsToggle();
-    }
-    
 
 
 

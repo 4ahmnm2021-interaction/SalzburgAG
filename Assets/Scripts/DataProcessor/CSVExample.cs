@@ -11,23 +11,23 @@ public class CSVExample : MonoBehaviour
     void Start()
     {
 
-        var reader = new StreamReader("C:\\Users\\kilia\\Downloads\\CSV\\sample.csv");
-        var csv = new CsvReader(reader);
+        // var reader = new StreamReader("C:\\Users\\kilia\\Downloads\\CSV\\sample.csv");
+        // var csv = new CsvReader(reader);
 
-        csv.Configuration.Delimiter = ";";
+        // csv.Configuration.Delimiter = ";";
 
-        var records = csv.GetRecords<Anlage>();
+        // var records = csv.GetRecords<Anlage>();
 
-        var fetch = csv.GetRecords<FreischaltscheinFetch>();
+        // var fetch = csv.GetRecords<FreischaltscheinFetch>();
 
         // MySchein.Anlagen = records;
       
 
-        foreach (var item in records)
-        {
-            // Debug.Log("ID: " + item.KKS + " / Name: " + item.Bezeichnung);
+        // foreach (var item in records)
+        // {
+        //     Debug.Log("ID: " + item.KKS + " / Name: " + item.Bezeichnung);
        
-        }
+        // }
 
    
        

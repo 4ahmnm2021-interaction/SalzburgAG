@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class popupExpand : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class popupExpand : MonoBehaviour
     private Vector3 BasePos;
     private bool close = false;
 
-  
+    private bool ModuleActive = false;
+
+    private Sprite closedSprite; 
+    public Sprite openSprite;
     void Start()
     {
 
-
+        closedSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         SystemEvents.current.onPopupClose += TogglePopup;
         destination = gameObject.transform.position;
         BasePos = Base.transform.position;
@@ -46,6 +50,18 @@ public class popupExpand : MonoBehaviour
             close = true; 
         }
     }
+
+
+     void OnMouseDown(){
+        SystemEvents.current.ModuleToggle(this.gameObject.name);
+        if(ModuleActive) {
+             this.gameObject.GetComponent<SpriteRenderer>().sprite = closedSprite;
+             ModuleActive = false;
+        } else {
+              this.gameObject.GetComponent<SpriteRenderer>().sprite = openSprite;
+              ModuleActive = true;
+        }
+    } 
 
 
 

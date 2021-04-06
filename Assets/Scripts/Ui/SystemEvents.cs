@@ -25,10 +25,11 @@ public class SystemEvents : MonoBehaviour
         }
     }
 
-    public event Action onWorkStepsToggle;
-    public void WorkStepsToggle() {
-        if(onWorkStepsToggle != null) {
-            onWorkStepsToggle();
+
+    public event Action<string> onModuleToggle;
+    public void ModuleToggle(string name) {
+        if(onModuleToggle != null) {
+            onModuleToggle(name);
         }
     }
 
