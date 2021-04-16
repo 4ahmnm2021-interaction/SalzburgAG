@@ -3979,7 +3979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383792636
 GameObject:
@@ -4849,7 +4849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529547818
 GameObject:
@@ -4924,18 +4924,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529547818}
   m_CullTransparentMesh: 0
---- !u!114 &558417263 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7043023797456246612, guid: 5431016de9e5ffd4296f5a8cd2593869,
-    type: 3}
-  m_PrefabInstance: {fileID: 7043023798026404878}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6d3962d68c5db4d8800c832b1b4724, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &564814931
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,7 +5094,7 @@ MonoBehaviour:
   - {fileID: 1676796399}
   - {fileID: 1039338035}
   - {fileID: 1784054802}
-  - {fileID: 1901375146}
+  - {fileID: 0}
   ARModules:
   - {fileID: 564814931}
   - {fileID: 505177379}
@@ -9964,7 +9952,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1901375146}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -16444,12 +16432,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900108548}
   m_CullTransparentMesh: 0
---- !u!1 &1901375146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7043023798809406116, guid: 5431016de9e5ffd4296f5a8cd2593869,
-    type: 3}
-  m_PrefabInstance: {fileID: 7043023798026404878}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911645624
 GameObject:
   m_ObjectHideFlags: 0
@@ -17309,7 +17291,7 @@ RectTransform:
   - {fileID: 1091130545}
   - {fileID: 1844744777}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18337,7 +18319,12 @@ PrefabInstance:
     - target: {fileID: 1477598457, guid: 5431016de9e5ffd4296f5a8cd2593869, type: 3}
       propertyPath: Base
       value: 
-      objectReference: {fileID: 558417263}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677064128093467802, guid: 5431016de9e5ffd4296f5a8cd2593869,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 7043023797539486834, guid: 5431016de9e5ffd4296f5a8cd2593869,
         type: 3}
       propertyPath: openSprite
