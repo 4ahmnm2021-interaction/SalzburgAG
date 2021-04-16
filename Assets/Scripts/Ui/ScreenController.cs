@@ -26,7 +26,6 @@ public class ScreenController : MonoBehaviour
     }
 
     public void ModuleToggle(string name) {
-        Debug.Log(name);
         foreach (var Module in ARModules)
         {
             if(Module.name == name) {
