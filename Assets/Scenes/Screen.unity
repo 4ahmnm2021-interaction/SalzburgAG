@@ -16908,7 +16908,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1964545746}
   - component: {fileID: 1964545745}
-  - component: {fileID: 1964545747}
   m_Layer: 0
   m_Name: DataProcessor
   m_TagString: Untagged
@@ -16923,9 +16922,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964545744}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4ebfe354a24c24fa0617203689f18b, type: 3}
+  m_Script: {fileID: 11500000, guid: c622684ef2da8f24e8b94ba0d0d927ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1964545746
@@ -16942,18 +16941,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1964545747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964545744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e246d50c211824aaf8f11d1c0fc3bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1978964277
 GameObject:
   m_ObjectHideFlags: 0
