@@ -9,6 +9,8 @@ public class ScreenController : MonoBehaviour
 
     public List<GameObject> PanelPosSlots;
 
+    public List<GameObject> PanelCarrier;
+
     
     // Start is called before the first frame update
     void Start()
@@ -48,7 +50,7 @@ public class ScreenController : MonoBehaviour
 
     void SetPanelPos() {
         var counter = 0;
-        foreach (var Module in ARModules)
+        foreach (var Module in PanelCarrier)
         {
             if(Module.activeSelf) {
                 var pos = PanelPosSlots[counter].transform.position.x;
