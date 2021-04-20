@@ -6,6 +6,10 @@ public class ScreenController : MonoBehaviour
 {
     public List<GameObject> Screens;
     public List<GameObject> ARModules;
+
+    public List<GameObject> PanelPosSlots;
+
+    
     // Start is called before the first frame update
     void Start()
     {        
@@ -31,12 +35,27 @@ public class ScreenController : MonoBehaviour
             if(Module.name == name) {
                if(Module.activeSelf) {
                    Module.SetActive(false);
+                   SetPanelPos();
                } else {
                    Module.SetActive(true);
+                   SetPanelPos();
                }
             }
             
         }
 
+    }
+
+    void SetPanelPos() {
+        var counter = 0;
+        foreach (var Module in ARModules)
+        {
+            if(Module.activeSelf) {
+                var pos = PanelPosSlots[counter].transform.position.x;
+                Module.transform.position = new Vector3(pos, Module.transform.position.y, Module.transform.position.z);
+                Debug.Log(pos);
+            }
+            counter ++;
+        }
     }
 }
