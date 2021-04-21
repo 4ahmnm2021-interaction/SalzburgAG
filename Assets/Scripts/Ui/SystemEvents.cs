@@ -18,6 +18,8 @@ public class SystemEvents : MonoBehaviour
         }
     }
 
+    // Subs: ScreenController
+    // Trigers: FreischaltscheinPanel
     public event Action onScreenCloseAll;
     public void ScreenCloseAll() {
         if(onScreenCloseAll != null) {
@@ -25,11 +27,21 @@ public class SystemEvents : MonoBehaviour
         }
     }
 
-
+    // Subs: ScreenController
+    // Triggers: PopupExpand
     public event Action<string> onModuleToggle;
     public void ModuleToggle(string name) {
         if(onModuleToggle != null) {
             onModuleToggle(name);
+        }
+    }
+
+    // Subs: ScreenController
+    // Triggers: FreischaltscheinPanel
+    public event Action<string> onScreenOpen;
+    public void ScreenOpen(string name) {
+        if(onScreenOpen != null) {
+            onScreenOpen(name);
         }
     }
 
