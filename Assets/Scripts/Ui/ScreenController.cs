@@ -81,7 +81,8 @@ public class ScreenController : MonoBehaviour
         {
             if(ARModules[counter].activeSelf) {
                 var position = Slots[posCounter].GetComponent<RectTransform>().localPosition.x;
-                Module.GetComponent<RectTransform>().localPosition =  new Vector2(position, Module.GetComponent<RectTransform>().localPosition.y);
+                // Module.GetComponent<RectTransform>().localPosition =  new Vector2(position, Module.GetComponent<RectTransform>().localPosition.y);
+                Module.GetComponent<ModuleAnimator>().posx = position;
                 Debug.Log(position);
                 posCounter ++;
             }
