@@ -15,7 +15,7 @@ public class DataProcessor : MonoBehaviour
 
     public List<Freischaltschein> Freischaltscheine = new List<Freischaltschein>();
 
-
+    public Freischaltschein currentSchein;
     
     void Start()
     {
@@ -75,6 +75,8 @@ public class DataProcessor : MonoBehaviour
             counter ++;
            
         }
+        currentSchein = Schein;
+        Freischaltscheine.Add(Schein);
         DebugObject();
     }
     void DebugObject() {
