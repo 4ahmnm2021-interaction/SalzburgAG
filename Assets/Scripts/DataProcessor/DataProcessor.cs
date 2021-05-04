@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.IO;
 
-
+public  enum TypeEnum{VentilA, VentilB,Sicherung};
 
 public class DataProcessor : MonoBehaviour
 {
     private string ApplicationPath;
     public Freischaltschein Schein = new Freischaltschein();
+
+    public List<Freischaltschein> Freischaltscheine = new List<Freischaltschein>();
+
+
     
     void Start()
     {
@@ -39,6 +44,11 @@ public class DataProcessor : MonoBehaviour
                 foreach(var item in data_values) {
                     if(c == 0) {TmpAnlage.KKS = item.ToString();}
                     if(c == 1) {TmpAnlage.Bezeichnung = item.ToString();}
+                    if(c == 2) 
+                    {
+                        TypeEnum parsed_enum = (TypeEnum)System.Enum.Parse( typeof(TypeEnum), item.ToString() );
+                        TmpAnlage.Type = parsed_enum;
+                    }
                     if(c == 2) {TmpAnlage.Ort = item.ToString();}
                     if(c == 3) {TmpAnlage.IST = item.ToString();}
                     if(c == 4) {TmpAnlage.SOLL = item.ToString();}
@@ -71,7 +81,7 @@ public class DataProcessor : MonoBehaviour
         Debug.Log("Schein Nummer: " + Schein.Nummer + " | Schein Datum: " + Schein.Datum + " |  Anlagen Anzahl: " + Schein.Anlagen.Count);
         foreach(var item in Schein.Anlagen)
         {
-             Debug.Log(item.KKS + " | " + item.Bezeichnung + " | " + item.Ort +  " | " +  item.IST + " | " + item.SOLL );  
+             Debug.Log(item.KKS + " | " + item.Bezeichnung + " | " + item.Type + " | "  + item.Ort +  " | " +  item.IST + " | " + item.SOLL );  
         }
     }
 }
@@ -80,6 +90,8 @@ public class Anlage
 {
     public string KKS;
     public string Bezeichnung ;
+
+    public TypeEnum Type;
     public string Ort ;
     public string IST ;
     public string SOLL ;
