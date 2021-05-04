@@ -5,12 +5,15 @@ using UnityEngine;
 public class WorkstepsLoader : MonoBehaviour
 {
     public GameObject StepPrefap;
-    public Freischaltschein Schein;
 
     public DataProcessor DataProcessor;
     void Start()
     {
-        Schein = DataProcessor.currentSchein;
+        var Schein = DataProcessor.currentSchein;
+
+        foreach(var Anlage in Schein.Anlagen) {
+            Debug.Log(Anlage.Bezeichnung);
+        }
 
     }
 

@@ -6,7 +6,6 @@ using CsvHelper;
 using CsvHelper.Configuration;
 using System.IO;
 
-public  enum TypeEnum{VentilA, VentilB,Sicherung};
 
 public class DataProcessor : MonoBehaviour
 {
@@ -15,9 +14,9 @@ public class DataProcessor : MonoBehaviour
 
     public List<Freischaltschein> Freischaltscheine = new List<Freischaltschein>();
 
-    public Freischaltschein currentSchein;
+    public Freischaltschein currentSchein = new Freischaltschein();
     
-    void Start()
+    void Awake()
     {
         ReadCSVFile();
     }
@@ -44,14 +43,10 @@ public class DataProcessor : MonoBehaviour
                 foreach(var item in data_values) {
                     if(c == 0) {TmpAnlage.KKS = item.ToString();}
                     if(c == 1) {TmpAnlage.Bezeichnung = item.ToString();}
-                    if(c == 2) 
-                    {
-                        TypeEnum parsed_enum = (TypeEnum)System.Enum.Parse( typeof(TypeEnum), item.ToString() );
-                        TmpAnlage.Type = parsed_enum;
-                    }
-                    if(c == 2) {TmpAnlage.Ort = item.ToString();}
-                    if(c == 3) {TmpAnlage.IST = item.ToString();}
-                    if(c == 4) {TmpAnlage.SOLL = item.ToString();}
+                    if(c == 2) {TmpAnlage.Type = item.ToString();}
+                    if(c == 3) {TmpAnlage.Ort = item.ToString();}
+                    if(c == 4) {TmpAnlage.IST = item.ToString();}
+                    if(c == 5) {TmpAnlage.SOLL = item.ToString();}
                     c++;
                 }
                 Schein.Anlagen.Add(TmpAnlage);
@@ -62,12 +57,12 @@ public class DataProcessor : MonoBehaviour
                     c = 0;
                     TmpAnlage = new Anlage();
                     foreach(var item in data_values) {
-                        if(c == 5) 
+                        if(c == 6) 
                         {
                             int.TryParse(item, out var num);
                             Schein.Nummer = num;
                         }
-                        if(c == 6) {Schein.Datum = item.ToString();}
+                        if(c == 7) {Schein.Datum = item.ToString();}
                         c++;
                     }
                 }
@@ -91,12 +86,11 @@ public class DataProcessor : MonoBehaviour
 public class Anlage
 {
     public string KKS;
-    public string Bezeichnung ;
-
-    public TypeEnum Type;
-    public string Ort ;
-    public string IST ;
-    public string SOLL ;
+    public string Bezeichnung;
+    public string Type;
+    public string Ort;
+    public string IST;
+    public string SOLL;
 }
 
 public class Freischaltschein

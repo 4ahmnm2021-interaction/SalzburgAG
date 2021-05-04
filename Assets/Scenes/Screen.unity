@@ -9029,6 +9029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StepPrefap: {fileID: 7758308044083511506, guid: 0584612c436358743bcf4f4c839e74db,
     type: 3}
+  DataObj: {fileID: 1964545744}
   DataProcessor: {fileID: 1964545745}
 --- !u!1 &1013044099
 GameObject:
