@@ -12,6 +12,8 @@ public class WorkstepsLoader : MonoBehaviour
         var Schein = DataProcessor.currentSchein;
 
         foreach(var Anlage in Schein.Anlagen) {
+            GameObject go = Instantiate(StepPrefap, new Vector3 (0,0,0), Quaternion.identity) as GameObject; 
+            go.transform.parent = this.gameObject.transform;
             Debug.Log(Anlage.Bezeichnung);
         }
 
