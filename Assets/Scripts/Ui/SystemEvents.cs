@@ -44,5 +44,13 @@ public class SystemEvents : MonoBehaviour
             onScreenOpen(name);
         }
     }
+    // Subs:
+    // Triggers: WorkStepsManager
+    public event Action<string, string> onStepDone;
+    public void StepDone(string KKS, string done) {
+        if(onStepDone!= null) {
+            onStepDone(KKS, done);
+        }
+    }
 
 }

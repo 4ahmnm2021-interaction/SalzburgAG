@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 2334048160610541375}
   - component: {fileID: 2334048160610541369}
   - component: {fileID: 2334048160610541374}
+  - component: {fileID: 6197744217639291168}
+  - component: {fileID: 6849691473608504131}
   m_Layer: 0
-  m_Name: checkboxs_sample
+  m_Name: Controller_checkbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 36dd64e506f7c504bb695823bef8868d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &2334048160610541369
@@ -114,7 +116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36dd64e506f7c504bb695823bef8868d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96998ff7e16313c429410770191963e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -124,6 +126,47 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &6197744217639291168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334048160610541373}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.085032105}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5.170064}
+  m_EdgeRadius: 0
+--- !u!114 &6849691473608504131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334048160610541373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e786517e2809e44cb75f668b109ea16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkedIcon: {fileID: 21300000, guid: 36dd64e506f7c504bb695823bef8868d, type: 3}
+  uncheckedIcon: {fileID: 21300000, guid: 96998ff7e16313c429410770191963e3, type: 3}
+  KKS: 
 --- !u!1 &2334048160656796797
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +256,7 @@ GameObject:
   - component: {fileID: 2334048161591723953}
   - component: {fileID: 2334048161591723958}
   m_Layer: 0
-  m_Name: MainTxxt
+  m_Name: MainTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

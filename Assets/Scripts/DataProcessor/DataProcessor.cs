@@ -20,6 +20,10 @@ public class DataProcessor : MonoBehaviour
     {
         ReadCSVFile();
     }
+
+    void Start() {
+        SystemEvents.current.onStepDone += StepDone;
+    }
     void ReadCSVFile() {
 
         var counter = 0;
@@ -79,6 +83,23 @@ public class DataProcessor : MonoBehaviour
         foreach(var item in Schein.Anlagen)
         {
              Debug.Log(item.KKS + " | " + item.Bezeichnung + " | " + item.Type + " | "  + item.Ort +  " | " +  item.IST + " | " + item.SOLL );  
+        }
+    }
+
+    void StepDone(string KKS, string done) {
+        foreach(var Anlage in Schein.Anlagen) {
+            if(KKS == Anlage.KKS) {
+                Debug.Log(Anlage.KKS + " Done");
+                if(done == "true") {
+                    Anlage.SOLL = Anlage.IST;
+                } else {
+                    if(Anlage.SOLL == "ZU") {
+                        Anlage.IST = "OFFEN";
+                    } else {
+                        Anlage.IST = "ZU";
+                    }
+                }
+            }
         }
     }
 }
