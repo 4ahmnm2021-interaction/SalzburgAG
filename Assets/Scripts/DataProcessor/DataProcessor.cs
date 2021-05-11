@@ -51,6 +51,7 @@ public class DataProcessor : MonoBehaviour
                     if(c == 3) {TmpAnlage.Ort = item.ToString();}
                     if(c == 4) {TmpAnlage.IST = item.ToString();}
                     if(c == 5) {TmpAnlage.SOLL = item.ToString();}
+                    TmpAnlage.position = new Vector3(-7.56f, 0f, 0f);
                     c++;
                 }
                 Schein.Anlagen.Add(TmpAnlage);
@@ -112,6 +113,7 @@ public class Anlage
     public string Ort;
     public string IST;
     public string SOLL;
+    public Vector3 position;
 }
 
 public class Freischaltschein
