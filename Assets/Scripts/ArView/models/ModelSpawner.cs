@@ -12,7 +12,11 @@ public class ModelSpawner : MonoBehaviour
         Schein = DataProcessor.Schein;
         foreach(var Anlage in Schein.Anlagen) {
             if(Anlage.Type == "Sicherung") {
-                var pref = InstantiatePrefap(Prefaps[2], Anlage);
+                var pref = InstantiatePrefap(Prefaps[0], Anlage);
+                SetData(Anlage, Anlage.Type, pref);
+            }
+            if(Anlage.Type == "VentilA") {
+                var pref = InstantiatePrefap(Prefaps[1], Anlage);
                 SetData(Anlage, Anlage.Type, pref);
             }
         }
@@ -29,7 +33,10 @@ public class ModelSpawner : MonoBehaviour
 
     private void SetData(Anlage Anlage, string type, GameObject obj) {
         if(type == "Sicherung") {
-            obj.transform.FindChild("Text").GetComponent<Text>().text = Anlage.KKS;
+            obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+        }
+        if(type == "VentilA") {
+            obj.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = Anlage.KKS;
         }
     }
 
