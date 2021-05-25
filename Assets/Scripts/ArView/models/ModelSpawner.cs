@@ -7,6 +7,8 @@ public class ModelSpawner : MonoBehaviour
     public Freischaltschein Schein;
     public DataProcessor DataProcessor;
     public List<GameObject> Prefaps;
+
+    public GameObject SpawnPositions;
     void Start()
     {
         Schein = DataProcessor.Schein;
@@ -19,24 +21,51 @@ public class ModelSpawner : MonoBehaviour
                 var pref = InstantiatePrefap(Prefaps[1], Anlage);
                 SetData(Anlage, Anlage.Type, pref);
             }
+           if(Anlage.Type == "VentilB") {
+                var pref = InstantiatePrefap(Prefaps[2], Anlage);
+                SetData(Anlage, Anlage.Type, pref);
+            }
+           if(Anlage.Type == "VentilC") {
+                var pref = InstantiatePrefap(Prefaps[3], Anlage);
+                SetData(Anlage, Anlage.Type, pref);
+            }
         }
         
     }
 
     private GameObject InstantiatePrefap(GameObject prefab, Anlage Anlage) {
         var pref = Instantiate(prefab, Anlage.position,  Quaternion.Euler(0f, 90f, 0f));
-        pref.transform.parent = this.gameObject.transform;
-        pref.transform.position = Anlage.position;
-        pref.transform.localScale = new Vector3(13f,13f,13f);
+        pref.transform.SetParent(RandomSpawnPoint());
+        pref.transform.localPosition = new Vector3(0,0,0);
+        pref.transform.localScale = new Vector3(1f,1f,1f);
+        pref.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         return pref;
     }
 
     private void SetData(Anlage Anlage, string type, GameObject obj) {
         if(type == "Sicherung") {
-            obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+          // Set Name
+          obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+          // Set Status
+          if(Anlage.IST == "ZU") {
+           obj.transform.GetChild(0).localRotation = Quaternion.Euler(-266, -90f, 90f);
+           }
         }
-        if(type == "VentilA") {
-            obj.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = Anlage.KKS;
+        if(type == "VentilA" || type == "VentilB") {
+            obj.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+        }
+        if(type == "VentilC") {
+            obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+            // obj.transform.GetChild(5).GetChild(2).GetChild(1).GetComponent<Text>().text = Anlage.KKS;
+        }
+    }
+
+    Transform RandomSpawnPoint() {
+        while(true) {
+            var point = SpawnPositions.transform.GetChild(Random.Range(0, SpawnPositions.transform.childCount));
+            if(point.childCount == 0) {
+                return point;
+            }
         }
     }
 
