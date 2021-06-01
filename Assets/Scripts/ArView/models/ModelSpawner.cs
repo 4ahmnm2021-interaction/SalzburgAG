@@ -15,19 +15,19 @@ public class ModelSpawner : MonoBehaviour
         foreach(var Anlage in Schein.Anlagen) {
             if(Anlage.Type == "Sicherung") {
                 var pref = InstantiatePrefap(Prefaps[0], Anlage);
-                SetData(Anlage, Anlage.Type, pref);
+                pref.transform.GetComponent<AnlageObj>().SetData(Anlage, Anlage.Type);
             }
             if(Anlage.Type == "VentilA") {
                 var pref = InstantiatePrefap(Prefaps[1], Anlage);
-                SetData(Anlage, Anlage.Type, pref);
+                pref.transform.GetComponent<AnlageObj>().SetData(Anlage, Anlage.Type);
             }
            if(Anlage.Type == "VentilB") {
                 var pref = InstantiatePrefap(Prefaps[2], Anlage);
-                SetData(Anlage, Anlage.Type, pref);
+                pref.transform.GetComponent<AnlageObj>().SetData(Anlage, Anlage.Type);
             }
            if(Anlage.Type == "VentilC") {
                 var pref = InstantiatePrefap(Prefaps[3], Anlage);
-                SetData(Anlage, Anlage.Type, pref);
+                pref.transform.GetComponent<AnlageObj>().SetData(Anlage, Anlage.Type);
             }
         }
         
@@ -42,23 +42,23 @@ public class ModelSpawner : MonoBehaviour
         return pref;
     }
 
-    private void SetData(Anlage Anlage, string type, GameObject obj) {
-        if(type == "Sicherung") {
-          // Set Name
-          obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
-          // Set Status
-          if(Anlage.IST == "ZU") {
-           obj.transform.GetChild(0).localRotation = Quaternion.Euler(-266, -90f, 90f);
-           }
-        }
-        if(type == "VentilA" || type == "VentilB") {
-            obj.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
-        }
-        if(type == "VentilC") {
-            obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
-            // obj.transform.GetChild(5).GetChild(2).GetChild(1).GetComponent<Text>().text = Anlage.KKS;
-        }
-    }
+    // private void SetData(Anlage Anlage, string type, GameObject obj) {
+    //     if(type == "Sicherung") {
+    //       // Set Name
+    //       obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+    //       // Set Status
+    //       if(Anlage.IST == "ZU") {
+    //        obj.transform.GetChild(0).localRotation = Quaternion.Euler(-266, -90f, 90f);
+    //        }
+    //     }
+    //     if(type == "VentilA" || type == "VentilB") {
+    //         obj.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+    //     }
+    //     if(type == "VentilC") {
+    //         obj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Anlage.KKS;
+    //         // obj.transform.GetChild(5).GetChild(2).GetChild(1).GetComponent<Text>().text = Anlage.KKS;
+    //     }
+    // }
 
     Transform RandomSpawnPoint() {
         while(true) {

@@ -22,7 +22,7 @@ public class DataProcessor : MonoBehaviour
     }
 
     void Start() {
-        SystemEvents.current.onStepDone += StepDone;
+        // SystemEvents.current.onStepDone += StepDone;
     }
     void ReadCSVFile() {
 
@@ -87,7 +87,7 @@ public class DataProcessor : MonoBehaviour
         }
     }
 
-    void StepDone(string KKS, string done) {
+    public string StepDone(string KKS, string done) {
         foreach(var Anlage in Schein.Anlagen) {
             if(KKS == Anlage.KKS) {
                 Debug.Log(Anlage.KKS + " Done");
@@ -101,7 +101,23 @@ public class DataProcessor : MonoBehaviour
                     }
                 }
             }
+            return Anlage.IST;
         }
+        return null;
+    }
+
+    public string StatusSwitch(string KKS) {
+        foreach(var Anlage in Schein.Anlagen) {
+            if(KKS == Anlage.KKS) {
+                if(Anlage.IST == "OFFEN") {
+                    Anlage.IST = "ZU";
+                } else {
+                    Anlage.IST = "OFFEN";
+                }
+            }
+            return Anlage.IST;
+        }
+        return null;
     }
 }
 

@@ -152,6 +152,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3571055078397148942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455696470310256153}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455696470310256153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571055078397148942}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3875736, w: 0.9218388}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4458188210647815724}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.607002}
 --- !u!1 &4417614146081388094
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +596,37 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: M2HSJ04AA201
+--- !u!1 &6992285279245577178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4458188210647815724}
+  m_Layer: 0
+  m_Name: Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4458188210647815724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992285279245577178}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3104952, z: 0.02338939}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1455696470310256153}
+  m_Father: {fileID: 5350565190338962713}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8942564917931644682
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5350565190338962713}
+  - component: {fileID: 5849050138977946745}
   m_Layer: 0
   m_Name: VentilMitAnzeige
   m_TagString: Untagged
@@ -598,6 +660,29 @@ Transform:
   - {fileID: 8066306092378941544}
   - {fileID: 3289010726609318971}
   - {fileID: 5307866377253743276}
+  - {fileID: 4458188210647815724}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5849050138977946745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942564917931644682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253145b961b6f9b48aee84678d8af014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KKS: 
+  Bezeichnung: 
+  Type: 
+  Ort: 
+  IST: 
+  SOLL: 
+  position: {x: 0, y: 0, z: 0}
+  processor: {fileID: 0}
+  Needel: {fileID: 0}
+  pos1: {fileID: 0}

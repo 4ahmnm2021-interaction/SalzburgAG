@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8016712018570495547}
   - component: {fileID: 7847679634360286611}
   - component: {fileID: 7847679634360286604}
-  - component: {fileID: 7847679634360286610}
   m_Layer: 0
   m_Name: Drehkopf
   m_TagString: Untagged
@@ -188,7 +187,7 @@ Animator:
   m_GameObject: {fileID: 1235802509238015802}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 637694f52d7077d4a8925c6d45593fdf, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -197,20 +196,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7847679634360286610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235802509238015802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0215cc48bd907846b5978a77d311cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ventil: {fileID: 8300000, guid: c6128e33b07161f44b188ebf538e4ef4, type: 3}
-  audios: {fileID: 7847679634360286611}
 --- !u!1 &4050218598638514462
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5722139393290283587}
+  - component: {fileID: 184591524421617}
   m_Layer: 0
   m_Name: Drehventil_Animtion
   m_TagString: Untagged
@@ -599,3 +585,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184591524421617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733120344518350928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253145b961b6f9b48aee84678d8af014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KKS: 
+  Bezeichnung: 
+  Type: 
+  Ort: 
+  IST: 
+  SOLL: 
+  position: {x: 0, y: 0, z: 0}
