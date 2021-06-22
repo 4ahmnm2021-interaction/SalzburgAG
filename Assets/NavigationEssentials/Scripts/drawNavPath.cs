@@ -63,7 +63,8 @@ public class drawNavPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NavMesh.CalculatePath(destination[destionIndex].position, player.position, NavMesh.AllAreas, path);
+        var pos = new Vector3(player.position.x, player.position.y - 0.5f, player.position.z);
+        NavMesh.CalculatePath(destination[destionIndex].position, pos, NavMesh.AllAreas, path);
       
 
         DrawVerticalLine();

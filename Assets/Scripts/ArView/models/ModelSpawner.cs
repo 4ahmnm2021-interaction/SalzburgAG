@@ -35,10 +35,12 @@ public class ModelSpawner : MonoBehaviour
 
     private GameObject InstantiatePrefap(GameObject prefab, Anlage Anlage) {
         var pref = Instantiate(prefab, Anlage.position,  Quaternion.Euler(0f, 90f, 0f));
-        pref.transform.SetParent(RandomSpawnPoint());
+        var randomlocation = RandomSpawnPoint();
+        pref.transform.SetParent(randomlocation);
         pref.transform.localPosition = new Vector3(0,0,0);
-        pref.transform.localScale = new Vector3(1f,1f,1f);
-        pref.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        // pref.transform.localScale = new Vector3(1f,1f,1f);
+        // pref.transform.localRotation = Quaternion.Euler(randomlocation.position.x, randomlocation.position.y, randomlocation.position.z);
+        // pref.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         return pref;
     }
 

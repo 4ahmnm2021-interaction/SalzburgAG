@@ -31,12 +31,12 @@ public class WayPointer : MonoBehaviour
             DisplayArrow();
         }
         else
-            gameObject.transform.GetChild(0).gameObject.active = false; 
+            gameObject.transform.GetChild(0).gameObject.SetActive(true); 
     }
 
     void DisplayArrow()
     {
-        gameObject.transform.GetChild(0).gameObject.active = true;
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
         transform.LookAt(drawNavPath.instance.destination[drawNavPath.instance.destionIndex]);
         lookAtAngle = transform.localEulerAngles;
