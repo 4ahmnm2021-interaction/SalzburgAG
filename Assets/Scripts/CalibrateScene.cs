@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CalibrateScene : MonoBehaviour
 {
+    public GameObject canvas;
     public GameObject content;
     public float moveValue = 1f;
     public float rotValue = 3f;
@@ -82,5 +83,8 @@ public class CalibrateScene : MonoBehaviour
 
     }
 
-
+    public void ToggleCanvas()
+    {
+        canvas.active = !canvas.active;
+    }
 }
